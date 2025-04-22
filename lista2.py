@@ -2,8 +2,12 @@
 Exercícios sobre os comandos de condição em python
 '''
 from datetime import date, datetime
+#pip3 install deep-translator
+#from deep_translator import GoogleTranslator
+
 
 HOJE = datetime.now()
+#tradutor=GoogleTranslator(source='en', target='pt')
 
 def exemplo_if_else():
     media = float(input('Média: '))
@@ -40,10 +44,27 @@ def q1():
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
 
+
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    num = int(input("digite um número inteiro:"))
+    if num % 3 == 0:
+        print("é múltiplo de 3")
+    else:
+        print("não é múltiplo de 3")
+         
+
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+
+    num = int(input("digite um numeros inteiros "))
+    if num % 5 == 0:
+     print(f" O número {num}è divisível por 5.")
+    else:
+     print(f"O número {num} não è dvisível por 5.")
+
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
@@ -147,6 +168,7 @@ def q10():
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+'''
 def q18():
     mes = int(input('Número do Mês: '))
     if mes < 1 or mes > 12:
@@ -154,7 +176,8 @@ def q18():
     else:
         data = datetime.strptime(f'01/{mes}/25', '%d/%m/%y')
         mes_extenso = data.strftime('%B')
-        print(mes_extenso)
+      print(tradutor.translate("Month:" + mes_extenso))
+'''
 
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
