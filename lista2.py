@@ -43,7 +43,16 @@ def q1():
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q02():
+   num1= int(input("digite o primeiro valor inteiro: "))
+   num2= int(input("digite o segundo valor inteiro:"))
+   soma= num1 + num2
 
+   print(f"A soma dos valores é: {soma}")
+
+   
+
+  
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
@@ -78,12 +87,32 @@ def q5():
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q06():
+    window = Tk()
+    window.title('Questão 12')
+    window.config(padx=10, pady=10)
+    lbl_idade = Label(text='Idade:')
+    lbl_idade.grid(row=0, column=0)
+    global txt_idade
+    txt_idade = Entry(width=4)
+    txt_idade.grid(row=0, column=1, columnspan=2, sticky='W')
+    txt_idade.focus()
+    btn_ok = Button(text="OK", width=5, command=show_idade)
+    btn_ok.grid(row=1, column=0, columnspan=3)
+
+    window.mainloop()
+
+
+
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
 
+    
+
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
@@ -118,17 +147,37 @@ def q10():
         print(f'{c} {b} {a}')
         
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+    num1=int(input('digite o primeiro numero'))
+    num2=int(input('digite o segundo numero'))
+    num3=int(input('digite o terceiro numero'))
+    if (num1 > num2 > num3 ):
+        print(f'{num1}')
+    if (num2 > num3 > num1):
+        print (f'{num2}')
+    if (num3 > num2 > num1):
+        print (f'{num3}')
+    
+q11()
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q12():
+    def show_idade():
+        idade = int(txt_idade>get())
+        
+
+
+    
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -238,5 +287,3 @@ def q18():
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 
-questao = int(input('Questão a executar: '))
-eval(f'q{questao}()')
