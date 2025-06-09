@@ -27,9 +27,10 @@ def q05():
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
+def q06():
+   num
 
 
-  
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
 def q07():
@@ -125,7 +126,24 @@ def q11():
 #    programa deve imprimir o valor da prestação atrasada, o período
 #    de atraso, os juros que serão cobrados pelo período de atraso, o
 #    valor da prestação acrescido dos juros. Considere juros simples.
+def q19():
+    valor_prestacao = float(input('valor da prestação'))
+    taxa_juros = float(input('taxa de juros diaria (%):'))
+    dias_atraso = int(input ('qtde de dias atrasado: '))
+    valor_multa = taxa_juros*dias_atraso*valor_prestacao 
+    texto = f''
+    valor da prestação:R$ {valor_prestacao}
+    taxa de juros diária: {taxa_juros}%
+    qtde de dias de atraso: {dias_atraso}dias
+    juros a serem cobrados: {taxa_juros*dias_atrasos}% = R$ {valor_multa}
+    
 
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+def q20():
+  qtde_dolares= float(input('qntd de dolares: US$'))
+  cambio_dolares= float(input('câmbio do dolar: R$ '))
+  print(f' Total em Reais: R$ {qtde_dolares*cambio_dolares_dolar}')
+   
+   

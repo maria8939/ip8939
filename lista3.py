@@ -1,3 +1,4 @@
+from biblioteca import *
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
@@ -124,6 +125,7 @@ def q8():
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 
+
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
 #jogadores, crie um programa que apresente as seguintes informações:
@@ -174,9 +176,38 @@ def q12():
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• A média de consumo dos tipos 1 e 2
+def q13():
+    numero = 1
+    consumo_geral = 0
+    consumo_tipo_1_2 = 0
+    qtde_tipo_1_2 = 0
+    while numero != 0:
+        custo= 0
+        numero = input_int ('numeros de consumidor: ', 0,9_999_999) 
+        if  numero == 0:
+            break
+        qtd_kw = input_int ('qtde de kwh: ',0,9_999_999)
+        tipo= input_int('tipo do consumidor:',1,3)
+
+        consumo_geral += qtd_kw 
+
+        custo += qtd_kw * 0.3 if tipo == 1 else 0;
+        custo += qtd_kw * 0.5 if tipo == 2 else 0;
+        custo += qtd_kw * 0.7 if tipo == 3 else 0;
+        consumo_tipo_1_2 += 1 if tipo == 1 else 0;
+        consumo_tipo_1_2 += 1 if tipo == 2 else 0;
+        qtde_tipo_1_2 += 1 if tipo == 1 else 0;
+        qtde_tipo_1_2 += 1 if tipo == 2 else 0; 
+        print(f'Custo total do consumidor : R$ {custo}')
+    print(f'Consumo Geral: {consumo_geral} kwh')
+    print(f'Média de consumo Tipo 1 e 2: {consumo_tipo_1_2/ qtde_tipo_1_2} kwh')
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
+def q14():
+        
+
+
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
